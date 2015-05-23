@@ -2923,7 +2923,7 @@ Une proposition est dans sa
 forme normale disjonctive
 \series default
  si elle consiste en (1...n) disjonctions où chaque disjonction est une conjonction
- de (1...m) formules atomiques ou de négations de formules atomiques
+ de (1...m) formules atomiques ou de négations de formules atomiques.
 \end_layout
 
 \begin_layout Example*
@@ -3009,7 +3009,7 @@ La
 \series bold
 forme normale disjonctive principale
 \series default
- d'une formule est une formule équivalent constituée uniquement de disjonctions
+ d'une formule est une formule équivalente constituée uniquement de disjonctions
  de mintermes.
 \end_layout
 
@@ -3103,7 +3103,7 @@ Une formule
 \begin_inset Formula $F$
 \end_inset
 
- est sous forme 
+ est sous la forme 
 \begin_inset Formula $(Q_{1}x_{1})...(Q_{n}x_{n})(M)$
 \end_inset
 
