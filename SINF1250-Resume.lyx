@@ -5018,7 +5018,7 @@ Si
 \end_inset
 
  boîtes, alors, il y a au moins une boîtes qui contient au moins 
-\begin_inset Formula $\left[N/k\right]$
+\begin_inset Formula $\left\lceil N/k\right\rceil $
 \end_inset
 
  objets.
