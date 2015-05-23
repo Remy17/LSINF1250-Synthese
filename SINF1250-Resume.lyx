@@ -172,7 +172,7 @@ Quelle heure est-il ?
 \end_layout
 
 \begin_layout Standard
-Le premier point n'est pas un énnoncés, et le deuxième n'est pas une proposition
+Le premier point n'est pas un énoncé, et le deuxième n'est pas une proposition
  tant qu'une valeur n'est pas attribuée à la variable.
 \end_layout
 
@@ -186,11 +186,11 @@ On utilise en général les lettres
 \begin_inset Quotes fld
 \end_inset
 
-vrai
+vraie
 \begin_inset Quotes frd
 \end_inset
 
- est noté 
+ est notée
 \begin_inset Quotes fld
 \end_inset
 
@@ -206,11 +206,11 @@ vrai
 \begin_inset Quotes fld
 \end_inset
 
-faux
+fausse
 \begin_inset Quotes frd
 \end_inset
 
- est noté 
+ est notée 
 \begin_inset Quotes fld
 \end_inset
 
@@ -227,7 +227,7 @@ faux
 
 \begin_layout Paragraph
 C'est le mathématicien George Boole qui a établi les règles du raisonnement
- par proposisiton en permettant d'en combiné plusieurs avec des opérateurs
+ par proposisiton en permettant d'en combiner plusieurs avec des opérateurs
  logiques.
 \end_layout
 
@@ -297,7 +297,7 @@ Aujourd'hui, nous sommes vendredi.
 \begin_inset Quotes fld
 \end_inset
 
-Aujourd'hui, nous ne somme pas vendredi.
+Aujourd'hui, nous ne sommes pas vendredi.
 \begin_inset Quotes frd
 \end_inset
 
@@ -600,7 +600,7 @@ implication
 \begin_inset Formula $p$
 \end_inset
 
- est vrai et 
+ est vraie et 
 \begin_inset Formula $q$
 \end_inset
 
@@ -652,7 +652,7 @@ conséquence
 \begin_inset Quotes fld
 \end_inset
 
-Aujourd'hui, c'est un jour de pluie si nous somme vendredi.
+Aujourd'hui, c'est un jour de pluie si nous sommes vendredi.
 \begin_inset Quotes frd
 \end_inset
 
@@ -2045,11 +2045,11 @@ Quantificateurs
 \begin_layout Standard
 Lorsque l'on a substitué des valeurs aux variables d'une fonction propositionnel
 le, l'énoncé obtenu a une valeur de vérité.
- On peut aussi utilisé la 
+ On peut aussi utiliser la 
 \series bold
 quantification
 \series default
- pour transformer les fonctions propositionnelle en propositions.
+ pour transformer les fonctions propositionnelles en propositions.
  Quand une proposition est vraie pour toutes les valeurs d'une variable
  appartenant à un certain domaine, on l'appele 
 \series bold
