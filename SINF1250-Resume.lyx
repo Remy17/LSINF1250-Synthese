@@ -1,0 +1,9174 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language french
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3.5cm
+\topmargin 4cm
+\rightmargin 3.5cm
+\bottommargin 4cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mathématiques pour l'informatique
+\end_layout
+
+\begin_layout Author
+Vermeiren Rémy
+\end_layout
+
+\begin_layout Date
+Juin 2015
+\end_layout
+
+\begin_layout Abstract
+Synthèse du cours de mathématique pour l'informatique donné par Marco Saerens
+ au deuxième BAC en science informatique.
+ Sur base des slides, du livre 
+\begin_inset Quotes fld
+\end_inset
+
+Mathématiques discrètes
+\begin_inset Quotes frd
+\end_inset
+
+ par H.
+ Rosen et d'une synthèse de Jérôme Thiry
+\end_layout
+
+\begin_layout Abstract
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Fondements : logique, ensembles et fonctions 
+\end_layout
+
+\begin_layout Subsection
+Logique
+\end_layout
+
+\begin_layout Subparagraph
+Une proposition est un énoncé qui peut être vrai ou faux, mais non les deux
+ à la fois.
+\end_layout
+
+\begin_layout Paragraph
+Les énoncés suivants sont des propositions :
+\end_layout
+
+\begin_layout Itemize
+Washington est la capitale des Etats-Unis.
+ (
+\begin_inset Formula $Vrai$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $2+2=4$
+\end_inset
+
+.
+ (
+\begin_inset Formula $Faux$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Paragraph
+Les énoncés suivants ne sont pas des propositions :
+\end_layout
+
+\begin_layout Itemize
+Quelle heure est-il ?
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x+1=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le premier point n'est pas un énnoncés, et le deuxième n'est pas une proposition
+ tant qu'une valeur n'est pas attribuée à la variable.
+\end_layout
+
+\begin_layout Subparagraph
+On utilise en général les lettres 
+\begin_inset Formula $p,q,r,s,t,...$
+\end_inset
+
+ pour désigner les propositions.
+ Une proposition 
+\begin_inset Quotes fld
+\end_inset
+
+vrai
+\begin_inset Quotes frd
+\end_inset
+
+ est noté 
+\begin_inset Quotes fld
+\end_inset
+
+
+\begin_inset Formula $V$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+ et une proposition 
+\begin_inset Quotes fld
+\end_inset
+
+faux
+\begin_inset Quotes frd
+\end_inset
+
+ est noté 
+\begin_inset Quotes fld
+\end_inset
+
+
+\begin_inset Formula $F$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+C'est le mathématicien George Boole qui a établi les règles du raisonnement
+ par proposisiton en permettant d'en combiné plusieurs avec des opérateurs
+ logiques.
+\end_layout
+
+\begin_layout Definition
+Soit p une proposition.
+ L'énnoncé 
+\begin_inset Quotes fld
+\end_inset
+
+Il n'est pas vrai que 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\begin_inset Quotes frd
+\end_inset
+
+ est une autre proposition, appellée négation de 
+\begin_inset Formula $p$
+\end_inset
+
+, qui est noté 
+\begin_inset Formula $\neg p$
+\end_inset
+
+.
+ La proposition 
+\begin_inset Formula $\neg p$
+\end_inset
+
+ se lit 
+\begin_inset Quotes fld
+\end_inset
+
+non 
+\begin_inset Formula $p$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $p\equiv$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Aujourd'hui, nous sommes vendredi.
+\begin_inset Quotes frd
+\end_inset
+
+ donc la négation 
+\begin_inset Formula $\neg p$
+\end_inset
+
+
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Aujourd'hui, nous ne somme pas vendredi.
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Example*
+\begin_inset Formula $q\equiv$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Il pleut aujourd'hui.
+\begin_inset Quotes frd
+\end_inset
+
+ donc la négation 
+\begin_inset Formula $\neg q\equiv$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Il ne pleut pas aujourd'hui.
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Soit 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ deux propositions.
+ La proposition 
+\begin_inset Quotes fld
+\end_inset
+
+
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+, notée 
+\begin_inset Formula $p$
+\end_inset
+
+
+\begin_inset Formula $\wedge q,$
+\end_inset
+
+ est vraie si à la fois 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ sont vraies.
+ Elle est fausse dans tous les autres cas.
+ Cette proposition est appelée 
+\series bold
+conjonction
+\series default
+ de 
+\begin_inset Formula $p$
+\end_inset
+
+ et de 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $p\wedge q\equiv$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Nous sommes aujourd'hui vendredi et il pleut.
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Soit 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ deux propositions.
+ La proposition 
+\begin_inset Quotes fld
+\end_inset
+
+
+\begin_inset Formula $p$
+\end_inset
+
+ ou 
+\begin_inset Formula $q$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+, notée 
+\begin_inset Formula $p$
+\end_inset
+
+
+\begin_inset Formula $\vee q$
+\end_inset
+
+, est fausse si 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ sont fausses.
+ Elle est vraie dans tous les autres cas.
+ La proposition 
+\begin_inset Formula $p$
+\end_inset
+
+
+\begin_inset Formula $\vee q$
+\end_inset
+
+ est appelée 
+\series bold
+disjonction
+\series default
+ de 
+\begin_inset Formula $p$
+\end_inset
+
+ et de 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $p\vee q\equiv$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Aujourd'hui, nous sommes vendredi ou c'est un jour de pluie.
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Soit 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ deux propositions.
+ La proposition 
+\begin_inset Quotes fld
+\end_inset
+
+
+\begin_inset Formula $p$
+\end_inset
+
+ ou exclusif 
+\begin_inset Formula $q$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+ notée 
+\begin_inset Formula $p$
+\end_inset
+
+
+\begin_inset Formula $\bigoplus q$
+\end_inset
+
+, est vraie si soit 
+\begin_inset Formula $p$
+\end_inset
+
+, soit 
+\begin_inset Formula $q$
+\end_inset
+
+ est vraie.
+ Elle est fausse dans tous les autres cas.
+ La proposition 
+\begin_inset Formula $p$
+\end_inset
+
+
+\begin_inset Formula $\bigoplus q$
+\end_inset
+
+ est appelée 
+\series bold
+disjonction exclusive
+\series default
+ de 
+\begin_inset Formula $p$
+\end_inset
+
+ et de 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $p\bigoplus q\equiv$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Aujourd'hui, nous sommes vendredi ou alors c'est un jour de pluie, mais
+ pas les deux.
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Soit 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ deux propositions.
+ L'
+\series bold
+implication
+\series default
+ 
+\begin_inset Formula $p$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow q$
+\end_inset
+
+ est une proposition qui est fausse quand 
+\begin_inset Formula $p$
+\end_inset
+
+ est vrai et 
+\begin_inset Formula $q$
+\end_inset
+
+ fausse, et qui est vraie dans tous les autres cas.
+ Dans cette implication, 
+\series bold
+
+\begin_inset Formula $p$
+\end_inset
+
+ est appelée l'hypothèse 
+\series default
+(ou l'
+\series bold
+antécédent
+\series default
+ ou la 
+\series bold
+prémisse
+\series default
+) et 
+\series bold
+
+\begin_inset Formula $q$
+\end_inset
+
+ est appelée la conclusion
+\series default
+ (ou la 
+\series bold
+conséquence
+\series default
+).
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $p$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow q$
+\end_inset
+
+
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Aujourd'hui, c'est un jour de pluie si nous somme vendredi.
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Soit 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ deux propositions.
+ La 
+\series bold
+biconditionnelle
+\series default
+ 
+\begin_inset Formula $p\leftrightarrow q$
+\end_inset
+
+ est une proposition qui est vraie quand 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ ont les mêmes valeurs de vérité et qui est fausse dans les autres cas.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $p\leftrightarrow q\equiv$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Il est nécessaire d'être vendredi pour que ce soit un jour de pluie, et
+ inversément.
+\begin_inset Quotes frd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Récapitulatif des propositions :
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="9">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\neg p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\neg q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\wedge q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\bigoplus q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\leftrightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La table de vérité construite avec 
+\begin_inset Formula $n$
+\end_inset
+
+ propositions est formée avec 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ lignes.
+\end_layout
+
+\begin_layout Subsection
+Equivalence propositionnelles
+\end_layout
+
+\begin_layout Definition
+Une proposition composée qui est toujours vraie, quelles que soient les
+ valeurs de vérité des propositions qui la composent, est appelée une 
+\series bold
+tautologie
+\series default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Une proposition composée qui est toujours fausse, quelles que soient les
+ valeurs de vérité des propositions qui la composent, est appelée une 
+\series bold
+contradiction
+\series default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Une proposition composée qui n'est ni une tautologie ni une contradiction
+ est appelée une 
+\series bold
+contingence
+\series default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Les propositions 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ sont 
+\series bold
+logiquement équivalentes
+\series default
+ si 
+\begin_inset Formula $p\leftrightarrow q$
+\end_inset
+
+ est une tautologie.
+ La notation 
+\begin_inset Formula $p\Leftrightarrow q$
+\end_inset
+
+ signifie que 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ sont logiquement équivalentes.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="19" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Equivalence
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nom
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee\neg p\Leftrightarrow V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Base
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\wedge\neg p\Leftrightarrow F$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Base
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\rightarrow q)\Leftrightarrow(\neg p\vee q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Base
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\wedge V\Leftrightarrow p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Identité
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee F\Leftrightarrow p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Identité
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee V\Leftrightarrow V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Domination
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\wedge F\Leftrightarrow F$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Domination
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee p\Leftrightarrow p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Idempotence
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\wedge p\Leftrightarrow p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Idempotence
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\neg(\neg p)\Leftrightarrow p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Loi de la double négation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee q\Leftrightarrow q\vee p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Commutativité
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\wedge q\Leftrightarrow q\wedge p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Commutativité
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\vee q)\vee r\Leftrightarrow p\vee(q\vee r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Associativité
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\wedge q)\wedge r\Leftrightarrow p\wedge(q\wedge r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Associativité
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee(q\wedge r)\Leftrightarrow(p\vee q)\wedge(p\vee r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Distributivité
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\wedge(q\vee r)\Leftrightarrow(p\wedge q)\vee(p\wedge r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Distributivité
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\neg(p\wedge q)\Leftrightarrow\neg p\vee\neg q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Loi de De Morgan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\neg(p\vee q)\Leftrightarrow\neg p\wedge\neg q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Loi de De Morgan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Démontrez que les propositions 
+\begin_inset Formula $\neg(p\vee(\neg p\wedge q))$
+\end_inset
+
+ et 
+\begin_inset Formula $\neg p\wedge\neg q$
+\end_inset
+
+ sont logiquement équivalentes.
+\end_layout
+
+\begin_layout Example*
+On va établir cette équivalence grâce à une suite d'équivalences logiques.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\neg(p\vee(\neg p\wedge q))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Leftrightarrow\neg p\wedge\neg(\neg p\wedge q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+selon la deuxième loi de De Morgan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Leftrightarrow\neg p\wedge\left[\neg(\neg p)\vee\neg q\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+selon la première loi de De Morgan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Leftrightarrow\neg p\wedge(p\vee\neg q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+selon la loi de double négation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Leftrightarrow(\neg p\wedge q)\vee(\neg p\wedge\neg q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+selon la loi de distributivité
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Leftrightarrow F\vee(\neg p\wedge\neg q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+puisque 
+\begin_inset Formula $\neg p\wedge p\Leftrightarrow F$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Leftrightarrow(\neg p\wedge\neg q)\vee F$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+selon la commutativité de la disjonction
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Leftrightarrow\neg p\wedge\neg q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+selon l'identité pour 
+\begin_inset Formula $F$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Par conséquent, les propositions 
+\begin_inset Formula $\neg(p\vee(\neg p\wedge q))$
+\end_inset
+
+ et 
+\begin_inset Formula $\neg p\wedge\neg q$
+\end_inset
+
+ sont logiquement équivalentes.
+\end_layout
+
+\begin_layout Subsection
+Prédicats et quantificateurs
+\end_layout
+
+\begin_layout Standard
+On trouve souvent des énoncés comportant des variables, tels que "
+\begin_inset Formula $x>3$
+\end_inset
+
+", ou encore "
+\begin_inset Formula $x=y+3$
+\end_inset
+
+".
+ Ces énoncés ne sont ni vrais ni faux tant que les valeurs des variables
+ ne sont pas précisées.
+ Cette section servira à obtenir des propositions à partir de tels énoncés.
+ Le 
+\series bold
+prédicat
+\series default
+ du premier énoncé est "est plus grand que 3".
+ La 
+\series bold
+variable
+\series default
+ est 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Cela nous donne donc la 
+\series bold
+fonction propositionnelle
+\series default
+ 
+\begin_inset Formula $P(x)\equiv x<3$
+\end_inset
+
+.
+ Une fois une valeur attribuée à 
+\begin_inset Formula $x$
+\end_inset
+
+ , 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ acquiert une valeur de vérité.
+\end_layout
+
+\begin_layout Subsubsection*
+Quantificateurs
+\end_layout
+
+\begin_layout Standard
+Lorsque l'on a substitué des valeurs aux variables d'une fonction propositionnel
+le, l'énoncé obtenu a une valeur de vérité.
+ On peut aussi utilisé la 
+\series bold
+quantification
+\series default
+ pour transformer les fonctions propositionnelle en propositions.
+ Quand une proposition est vraie pour toutes les valeurs d'une variable
+ appartenant à un certain domaine, on l'appele 
+\series bold
+univers du discours
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Definition
+La 
+\series bold
+quantification universelle
+\series default
+ de 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ est la proposition "
+\begin_inset Formula $P(x)$
+\end_inset
+
+ est vrai pour toutes les valeurs de 
+\begin_inset Formula $x$
+\end_inset
+
+ dans l'univers du discours."
+\end_layout
+
+\begin_layout Remark*
+La notation 
+\begin_inset Formula $\forall x\, P(x)$
+\end_inset
+
+ désigne la quantification universelle de 
+\begin_inset Formula $P(x)$
+\end_inset
+
+.
+ La proposition 
+\begin_inset Formula $\forall x\, P(x)$
+\end_inset
+
+ s'exprime également : "pour tout 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $P(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\forall x\, P(x)$
+\end_inset
+
+ équivaut à 
+\begin_inset Formula $P(x_{1})\wedge P(x_{2})\wedge...\wedge P(x_{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+La 
+\series bold
+quantification existentielle
+\series default
+ de 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ est la proposition "Il existe un élément 
+\begin_inset Formula $x$
+\end_inset
+
+ dans l'univers du discours tel que 
+\begin_inset Formula $P(x)$
+\end_inset
+
+soit vraie."
+\end_layout
+
+\begin_layout Remark*
+La notation 
+\begin_inset Formula $\exists x\, P(x)$
+\end_inset
+
+ désigne la quantification existentielle de 
+\begin_inset Formula $P(x).$
+\end_inset
+
+ La proposition 
+\begin_inset Formula $\exists x\, P(x)$
+\end_inset
+
+ s'exprime également : "Il existe un élément 
+\begin_inset Formula $x$
+\end_inset
+
+ tel que 
+\begin_inset Formula $P(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\exists x\, P(x)$
+\end_inset
+
+ équivaut à 
+\begin_inset Formula $P(x_{1})\vee P(x_{2})\vee...\vee P(x_{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantifications d'une variable
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Enoncé
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Cet énoncé est-il vrai ?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Cet énoncé est-il faux ?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $\forall x\, P(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $P(x)$
+\end_inset
+
+est vrai pour tout 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Il existe un 
+\begin_inset Formula $x$
+\end_inset
+
+ pour lequel 
+\begin_inset Formula $P(x)$
+\end_inset
+
+est faux.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $\exists x\, P(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Il existe un 
+\begin_inset Formula $x$
+\end_inset
+
+ pour lequel 
+\begin_inset Formula $P(x)$
+\end_inset
+
+est vrai.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $P(x)$
+\end_inset
+
+ est faux pour tout 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="2cm">
+<column alignment="left" valignment="top" width="6cm">
+<column alignment="left" valignment="top" width="5cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantifications de deux variables
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Enoncé
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Cet énoncé est-il vrai ?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Cet énoncé est-il faux ?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $\forall x\,\forall y\, P(x,y)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall y\,\forall x\, P(x,y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ est vrai pour chaque paire 
+\begin_inset Formula $x,y$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Il existe une paire 
+\begin_inset Formula $x,y$
+\end_inset
+
+ pour laquelle 
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ est faux.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $\forall x\,\exists y\, P(x,y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Pour chaque 
+\begin_inset Formula $x$
+\end_inset
+
+, il existe un 
+\begin_inset Formula $y$
+\end_inset
+
+ pour lequel 
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ est vrai.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Il existe un 
+\begin_inset Formula $x$
+\end_inset
+
+ tel que 
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ est faux pour chaque 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $\exists x\,\forall y\, P(x,y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Il existe un 
+\begin_inset Formula $x$
+\end_inset
+
+ pour lequel 
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ est vrai pour chaque 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Pour chaque 
+\begin_inset Formula $x$
+\end_inset
+
+, il existe un 
+\begin_inset Formula $y$
+\end_inset
+
+ pour lequel 
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ est faux.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $\exists x\,\exists y\, P(x,y)$
+\end_inset
+
+ 
+\begin_inset Formula $\exists x\,\exists y\, P(x,y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Il existe une paire 
+\begin_inset Formula $x,y$
+\end_inset
+
+ pour laquelle 
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ est vrai.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ est faux pour chaque paire 
+\begin_inset Formula $x,y$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="2cm">
+<column alignment="left" valignment="top" width="1.7cm">
+<column alignment="left" valignment="top" width="4.5cm">
+<column alignment="left" valignment="top" width="4.5cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lois de De Morgan pour les quantificateurs
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Négation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Enoncé équivalent
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Quand la négation est-elle vraie ?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Quand la négation est-elle fausse ?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $\neg\exists x\, P(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $\forall x\,\neg P(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $P(x)$
+\end_inset
+
+est faux pour tout 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Il existe un 
+\begin_inset Formula $x$
+\end_inset
+
+ pour lequel 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ est vrai.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $\neg\forall x\: P(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $\exists x\,\neg P(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Il existe un 
+\begin_inset Formula $x$
+\end_inset
+
+ pour lequel 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ est faux.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\begin_inset Formula $P(x)$
+\end_inset
+
+ est vrai pour chaque 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Forme normales
+\end_layout
+
+\begin_layout Subsubsection
+Forme normale disjonctive
+\end_layout
+
+\begin_layout Definition
+Une proposition est dans sa 
+\series bold
+forme normale disjonctive
+\series default
+ si elle consiste en (1...n) disjonctions où chaque disjonction est une conjonction
+ de (1...m) formules atomiques ou de négations de formules atomiques
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $(\neg p\wedge q)\vee(p\wedge\neg q)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Forme normale conjonctive
+\end_layout
+
+\begin_layout Definition
+Une proposition est dans sa 
+\series bold
+forme nomarle conjonctive
+\series default
+ si c'est une conjonction de disjonctions.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $(p\vee\neg r)\wedge(\neg q\vee p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Toutes les propositions peuvent être réécrites sous leurs formes normales
+ conjonctive et disjonctive.
+\end_layout
+
+\begin_layout Subsubsection
+Forme normale disjonctive principale
+\end_layout
+
+\begin_layout Definition
+Les 
+\series bold
+mintermes
+\series default
+ de 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ sont des conjonctions où les variables apparaissent soit niées soit non-niées,
+ mais n'apparaissent pas et niées et non-niées.
+ Les quatre mintermes de 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ sont 
+\begin_inset Formula $p\wedge q$
+\end_inset
+
+, 
+\begin_inset Formula $p\wedge\neg q$
+\end_inset
+
+, 
+\begin_inset Formula $\neg p\wedge q$
+\end_inset
+
+ et 
+\begin_inset Formula $\neg p\wedge\neg q$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+La 
+\series bold
+forme normale disjonctive principale
+\series default
+ d'une formule est une formule équivalent constituée uniquement de disjonctions
+ de mintermes.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+Pour construire une forme normale disjonctive principale, il est nécessaire
+ de remplacer les implications et les équivalences au moyen des opérateurs
+ 
+\begin_inset Formula $\wedge,$
+\end_inset
+
+
+\begin_inset Formula $\vee,$
+\end_inset
+
+
+\begin_inset Formula $\neg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Forme normale conjonctive principale
+\end_layout
+
+\begin_layout Definition
+Les 
+\series bold
+maxtermes
+\series default
+ de 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ sont des disjonction où les variables apparaissent soit niées soit non-niées,
+ mais n'apparaissent pas et niées et non-niées.
+ Les quatre maxtermes de 
+\begin_inset Formula $p$
+\end_inset
+
+ et 
+\begin_inset Formula $q$
+\end_inset
+
+ sont 
+\begin_inset Formula $p\vee q$
+\end_inset
+
+, 
+\begin_inset Formula $p\vee\neg q$
+\end_inset
+
+, 
+\begin_inset Formula $\neg p\vee q$
+\end_inset
+
+ et 
+\begin_inset Formula $\neg p\vee\neg q$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+La 
+\series bold
+forme normale conjonctive principale
+\series default
+ d'une formule est une formule équivalente constituée uniquement de conjonctions
+ de maxtermes.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Forme normale prénexe
+\end_layout
+
+\begin_layout Definition
+Une formule 
+\begin_inset Formula $F$
+\end_inset
+
+ en logique de premier ordre est dite dans sa forme normale prénexe si et
+ seulement si la formule 
+\begin_inset Formula $F$
+\end_inset
+
+ est sous forme 
+\begin_inset Formula $(Q_{1}x_{1})...(Q_{n}x_{n})(M)$
+\end_inset
+
+ où chaque 
+\begin_inset Formula $Q_{i}x_{i}$
+\end_inset
+
+ est soit 
+\begin_inset Formula $\forall x_{i}$
+\end_inset
+
+ soit 
+\begin_inset Formula $\exists x_{i}$
+\end_inset
+
+ et 
+\begin_inset Formula $M$
+\end_inset
+
+ est une formule ne contenant aucun quantificateur.
+ 
+\begin_inset Formula $(Q_{1}x_{1})...(Q_{n}x_{n})$
+\end_inset
+
+ est appelé le préfixe et 
+\begin_inset Formula $M$
+\end_inset
+
+ la matrice de la formule.
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $(\forall x)(\forall y)(P(x,y)\wedge Q(y))$
+\end_inset
+
+ est sous forme normale prénexe.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Preuves et raisonnement mathématiques
+\end_layout
+
+\begin_layout Subsection
+Méthodes de preuve (règles d'inférence)
+\end_layout
+
+\begin_layout Standard
+Un argument est divisé en deux parties : les prémisses qui se placent au-dessus
+ de la ligne, et la conclusion qui se place en-dessous.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x(Homme(x)\rightarrow Mortel(x))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $Homme(Socrate)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore Mortel(Socrate)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Règles concernant la logique propositionnelle
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Règle d'inférence
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tautologie
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nom
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore p\vee q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\rightarrow(p\vee q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Addition
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $p\wedge q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\wedge q)\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Simplification
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore p\wedge q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $((p)\wedge(q))\rightarrow(p\wedge q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Conjonction
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\neg p\vee r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore q\vee r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $((\neg p\vee r)\wedge(p\vee q))\rightarrow(q\vee r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Résolution
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\wedge(p\rightarrow q))\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modus ponens
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\neg q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore\neg p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\neg q\wedge(p\rightarrow q))\rightarrow\neg p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modus tollens
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $q\rightarrow r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore p\rightarrow r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $((p\rightarrow q)\wedge(q\rightarrow r))\rightarrow(p\rightarrow r)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Syllogisme par hypothèse
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\vee q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\neg p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\neg p\wedge(p\vee q))\rightarrow q$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Syllogisme disjonctif
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Règles concernant la logique quantificative
+\end_layout
+
+\begin_layout Paragraph
+Instantiation universelle
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall xP(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore P(c)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Généralisation universelle
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P(c)$
+\end_inset
+
+, c étant arbitraire
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore\forall xP(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Instantiation existentielle
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists xP(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\therefore P(c)$
+\end_inset
+
+ pour un certain c
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Généralisation existentielle
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\therefore P(c)$
+\end_inset
+
+ pour un certain c
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists xP(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Modus Ponens universel
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x(P(x)\rightarrow Q(x))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P(a)$
+\end_inset
+
+, a étant un élément partiulier du domaine
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula $\therefore Q(a)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Preuve directe
+\end_layout
+
+\begin_layout Standard
+Les théorèmes sont souvent sous la forme 
+\begin_inset Formula 
+\[
+\forall x(P(x)\rightarrow Q(x))
+\]
+
+\end_inset
+
+On peut les prouver en montrant qu'en prenant un c arbitraire, 
+\begin_inset Formula 
+\[
+P(c)\rightarrow Q(c)
+\]
+
+\end_inset
+
+ et en utilisant la généralisation universelle.
+\end_layout
+
+\begin_layout Standard
+On assume que 
+\begin_inset Formula $p$
+\end_inset
+
+ est vrai.
+ On utilise les règles d'inférences, les axiomes et les équivalences logiques
+ afin de montrer que 
+\begin_inset Formula $q$
+\end_inset
+
+ est obligatoirement vrai.
+\end_layout
+
+\begin_layout Example*
+Une preuve directe pour 
+\begin_inset Quotes eld
+\end_inset
+
+si 
+\begin_inset Formula $n$
+\end_inset
+
+ est un entier impair, alors 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ est impair
+\begin_inset Quotes erd
+\end_inset
+
+.
+ On assume que n est impair, donc 
+\begin_inset Formula $n=2k+1$
+\end_inset
+
+, 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+.
+ Si l'on met les deux cotés de l'équation au carré, on obtient
+\begin_inset Formula 
+\[
+n^{2}=4k^{2}+4k+1=2(2k^{2}+2k)+1=2r+1
+\]
+
+\end_inset
+
+ où 
+\begin_inset Formula $r=2k^{2}+2k$
+\end_inset
+
+.
+ On a donc montré que si 
+\begin_inset Formula $n$
+\end_inset
+
+ est un entier impair, alors 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ est un entier impair.
+\end_layout
+
+\begin_layout Subsection
+Preuve par contraposition
+\end_layout
+
+\begin_layout Standard
+On assume 
+\begin_inset Formula $\neg q$
+\end_inset
+
+ et on montre que 
+\begin_inset Formula $\neg p$
+\end_inset
+
+ est aussi vrai.
+ Si l'on donne une preuve que 
+\begin_inset Formula $\neg q\rightarrow\neg p$
+\end_inset
+
+ est vrai, alors on donne aussi une preuve pour 
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+Prouver que si 
+\begin_inset Formula $n$
+\end_inset
+
+ est un entier et que 
+\begin_inset Formula $3n+2$
+\end_inset
+
+ est impair, alors 
+\begin_inset Formula $n$
+\end_inset
+
+ est impair.
+ On assume que 
+\begin_inset Formula $n$
+\end_inset
+
+ est pair.
+ 
+\begin_inset Formula 
+\[
+3n+2=3(2k)+2=6k+2=2(3k+1)=2j
+\]
+
+\end_inset
+
+pour 
+\begin_inset Formula $j=3k=1$
+\end_inset
+
+.
+ On peut donc dire que 
+\begin_inset Formula $3n+2$
+\end_inset
+
+ est pair.
+ On a donc prouvé
+\begin_inset Formula $\neg q\rightarrow\neg p$
+\end_inset
+
+, et donc 
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Preuve par contradiction
+\end_layout
+
+\begin_layout Standard
+Pour prouver 
+\begin_inset Formula $p$
+\end_inset
+
+, on assume 
+\begin_inset Formula $\neg p$
+\end_inset
+
+ et on dérive une contradiction telle que 
+\begin_inset Formula $p\wedge\neg p$
+\end_inset
+
+.
+ On montre donc que si 
+\begin_inset Formula $\neg p\rightarrow F$
+\end_inset
+
+ est vrai, alors la contraposée 
+\begin_inset Formula $T\rightarrow p$
+\end_inset
+
+ est vraie aussi.
+\end_layout
+
+\begin_layout Standard
+Prouver que si l'on choisit 22 jours dans un calendrier, au moins 4 d'entre
+ eux tombent le même jour de la semaine.
+ On commence par assumer que pas plus de 3 des 22 jours tombent le même
+ jour.
+ Comme une semaine contient 7 jours, on n'aurait sélectionné seulement 21
+ jours.
+ Cela contradit donc le fait que l'on ait choisi 22 jours.
+\end_layout
+
+\begin_layout Subsection
+Principe de l'induction
+\end_layout
+
+\begin_layout Standard
+La démonstration par induction que 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ est vraie pour tout entier positif 
+\begin_inset Formula $n$
+\end_inset
+
+ se fait en deux étapes :
+\end_layout
+
+\begin_layout Enumerate
+Etape de base : On démontre que la proposition 
+\begin_inset Formula $P(1)$
+\end_inset
+
+ est vraie.
+\end_layout
+
+\begin_layout Enumerate
+Etape inductive : On démontre que l'implication 
+\begin_inset Formula $P(n)\rightarrow P(n+1)$
+\end_inset
+
+ est vraie pour tout entier positif 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(n)$
+\end_inset
+
+ est appelée l'
+\series bold
+hypothèse inductive
+\series default
+.
+ Lorsque l'on effectue les deux étapes de la démonstration par induction,
+ on prouve que 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ est vraie pour tout entier positif 
+\begin_inset Formula $n$
+\end_inset
+
+, et donc, 
+\begin_inset Formula $\forall n\, P(n)$
+\end_inset
+
+ est vraie.
+\end_layout
+
+\begin_layout Standard
+On peut aussi exprimé le principe de l'induction sous forme de règle d'inférence
+ : 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\[
+\left[P(1)\wedge\,\forall n\,(P(n)\rightarrow P(n+1))\right]\rightarrow\forall n\, P(n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+Disons que 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ dit que la somme des 
+\begin_inset Formula $n$
+\end_inset
+
+ premiers entiers positifs impairs est 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Etape de base : 
+\begin_inset Formula $P(1)$
+\end_inset
+
+ : 1 est bien égal à 
+\begin_inset Formula $1^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Etape inductive : On suppose que 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ est vrai, et donc
+\begin_inset Formula 
+\[
+\mathbf{1+3+5+...+(2n-1)}=\mathbf{n^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pour 
+\begin_inset Formula $n+1$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+1+3+5+...+(2n-1)+(2n+1)=[\mathbf{1+3+...+(2n-1)}]+(2n+1)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\mathbf{n}^{\mathbf{2}}+2n+1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=(n+1)^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(n+1)$
+\end_inset
+
+ découle donc bien de 
+\begin_inset Formula $P(n)$
+\end_inset
+
+.
+ Comme 
+\begin_inset Formula $P(1)$
+\end_inset
+
+ est vrai et que 
+\begin_inset Formula $P(n)\rightarrow P(n+1)$
+\end_inset
+
+ est vrai pour tous les entiers positifs, 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ est vrai pour tous les entiers positifs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Dénombrement 
+\end_layout
+
+\begin_layout Subsection
+Notions de base du dénombrement
+\end_layout
+
+\begin_layout Standard
+Il existe deux principes fondamentaux de dénombrement.
+ Le
+\series bold
+ principe de la somme
+\series default
+ et le 
+\series bold
+principe du produit
+\series default
+.
+ Nous verrons par après d'autres principes utiles pour le dénombrement.
+\end_layout
+
+\begin_layout Subsubsection
+Principe de la somme
+\end_layout
+
+\begin_layout Standard
+Si on peut accomplir une tâche de 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+façons et une deuxième tâche de 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ façons, et si on peut effectuer ces tâches simultanéement, alors il y à
+ 
+\begin_inset Formula $n_{1}+n_{2}$
+\end_inset
+
+ façons d'exécuter l'une ou l'autre de ces tâches.
+\end_layout
+
+\begin_layout Subsubsection
+Principe du produit
+\end_layout
+
+\begin_layout Standard
+On suppose qu'une procédure peut être divisée en deux tâches.
+ S'il existe 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ façons de faire la première tâche et 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ façons d'accomplir la deuxième tâche lorsque la première est terminée,
+ alors, il y a 
+\begin_inset Formula $n_{1}n_{2}$
+\end_inset
+
+ façons d'effectuer la procédure.
+\end_layout
+
+\begin_layout Subsubsection
+Principe d'inclusion-exclusion
+\end_layout
+
+\begin_layout Standard
+On peut formuler ce principe de dénombrement en termes ensemblistes.
+ Soit 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+et 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ des ensembles.
+ Soit 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+la tâche de choisir un élément de 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+et 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ la tâche de choisir un élément de 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+.
+ Il existe 
+\begin_inset Formula $|A_{n}|$
+\end_inset
+
+ façons de faire 
+\begin_inset Formula $T_{n}$
+\end_inset
+
+.
+ Le nombre de façons d'effectuer 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ ou
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ quivaut à la somme du nombre de façons d'éffectuer 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ et du nombre de façons d'effectuer 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ , moins le nombre de façons d'exécuter 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+ Puisqu'il existe 
+\begin_inset Formula $|A_{1}\cup A_{2}|$
+\end_inset
+
+ façons d'accomplir soit 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+, soit 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ et 
+\begin_inset Formula $|A_{1}\cap A_{2}|$
+\end_inset
+
+ façons de faire 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ et
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ on obtient :
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\[
+|A_{1}\cup A_{2}|=|A_{1}|+|A_{2}|-|A_{1}\cap A_{2}|
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Principe des nids de pigeon
+\end_layout
+
+\begin_layout Standard
+On suppose qu'un groupe de pigeon s'envole vers un ensemble de nids pour
+ s'y percher.
+ Selon le principe des nids de pigeon.
+ S'il y a plus de pigeon que de nids, alors, il doit y avoir au moins un
+ nid dans lequel se trouve au moins deux pigeons.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+Principe des nids de pigeon
+\end_layout
+
+\begin_layout Theorem*
+Si 
+\begin_inset Formula $k+1$
+\end_inset
+
+ objets ou plus sont rangés dans 
+\begin_inset Formula $k$
+\end_inset
+
+ boites, alors il y a au moins une boîte qui contient deux objets ou plus.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem*
+
+\series bold
+Principe des nids de pigeon généralisé
+\end_layout
+
+\end_deeper
+\begin_layout Theorem*
+Si 
+\begin_inset Formula $N$
+\end_inset
+
+ objets sont rangés dans 
+\begin_inset Formula $k$
+\end_inset
+
+ boîtes, alors, il y a au moins une boîtes qui contient au moins 
+\begin_inset Formula $\left[N/k\right]$
+\end_inset
+
+ objets.
+\end_layout
+
+\begin_layout Example*
+Dans un groupe de 27 mots français, il doit y en avoir au moins deux qui
+ commencent par la même lettre, car il n'y a que 26 lettres dans l'alphabet
+ français.
+\end_layout
+
+\begin_layout Subsection
+Permutations et combinaisons généralisées
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Avec remise ?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Formule
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+r-permutations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cfrac{n!}{(n-r)!}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+r-combinaisons
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cfrac{n!}{r!(n-r)!}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+r-permutations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Oui
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $n^{r}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+r-combinaisons
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Oui
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cfrac{(n+r-1)!}{r!(n-1)!}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Permutations
+\end_layout
+
+\begin_layout Standard
+La 
+\series bold
+permutation
+\series default
+ d'un ensemble d'objets distincts est un arrangement ordonné de ces objets.
+ Un arrangement ordonné de 
+\begin_inset Formula $r$
+\end_inset
+
+ éléments d'un ensemble est appelé une 
+\begin_inset Formula $r$
+\end_inset
+
+
+\series bold
+-permutation
+\series default
+.
+ Le nombre de r-permutation d'un ensemble à 
+\begin_inset Formula $n$
+\end_inset
+
+ éléments est noté 
+\begin_inset Formula $P(n,r)$
+\end_inset
+
+.
+ On peut trouver 
+\begin_inset Formula $P(n,r)$
+\end_inset
+
+ en utilisant le principe du produit.
+\end_layout
+
+\begin_layout Example*
+Soit 
+\begin_inset Formula $S=\{1,2,3\}$
+\end_inset
+
+.
+ L'arrangement 3,1,2 est une permuation de S.
+ L'arrangement 
+\begin_inset Formula $3,2$
+\end_inset
+
+ est une 
+\begin_inset Formula $2$
+\end_inset
+
+-permutation de S.
+\end_layout
+
+\begin_layout Theorem*
+Le nombre de 
+\begin_inset Formula $r$
+\end_inset
+
+-permutation d'un ensemble de 
+\begin_inset Formula $n$
+\end_inset
+
+ éléments distincts est 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+P(n,r)=n(n-1)(n-2)...(n-r+1)=\frac{n!}{(n-r)!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+P(n,n)=n!
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+De combient de façons peut-on choisir 4 joueurs distincts parmi 10 joueurs
+ dans une équipe pour jouer quetre match de tennis, où les matchs sont ordonnés
+ ?
+\end_layout
+
+\begin_layout Example*
+Solution : 
+\begin_inset Formula $P(10,4)=10*9*8*7=5040$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Permutations avec remise
+\end_layout
+
+\begin_layout Theorem*
+Le nombre de 
+\begin_inset Formula $r$
+\end_inset
+
+-permutations d'un ensemble à 
+\begin_inset Formula $n$
+\end_inset
+
+ objets avec remise est 
+\begin_inset Formula $n^{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Il y a 
+\begin_inset Formula $n$
+\end_inset
+
+ façons de sélectionner un élément dans l'ensemble pour chacune des 
+\begin_inset Formula $r$
+\end_inset
+
+ positions dans la 
+\begin_inset Formula $r$
+\end_inset
+
+-permutation avec remise puisque, pour chaque choix, chacun des 
+\begin_inset Formula $n$
+\end_inset
+
+ objets est disponible.
+ Ainsi, selon le principe du produit, il y a 
+\begin_inset Formula $n^{r}$
+\end_inset
+
+ 
+\begin_inset Formula $r$
+\end_inset
+
+-permutations avec remise.
+\end_layout
+
+\begin_layout Subsubsection
+Permutations d'ensembles d'objets indiscernables
+\end_layout
+
+\begin_layout Standard
+Certains élements peuvent ne pas être discernables dans les problèmes de
+ dénombrement.
+ Il faut donc tenter d'éviter de compter les objets à plusieurs reprise.
+\end_layout
+
+\begin_layout Theorem*
+Le nombre de différentes permutations de 
+\begin_inset Formula $n$
+\end_inset
+
+ objets, où il y a 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ objets indiscernables de type 1, 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ objets indiscernables de type 2,...
+ et 
+\begin_inset Formula $n_{k}$
+\end_inset
+
+ objets indiscernables de type 
+\begin_inset Formula $k$
+\end_inset
+
+ est 
+\begin_inset Formula 
+\[
+\cfrac{n!}{n_{1}!n_{2}!...n_{k}!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Combinaisons
+\end_layout
+
+\begin_layout Standard
+Une 
+\series bold
+
+\begin_inset Formula $r$
+\end_inset
+
+-combinaison
+\series default
+ des éléments d'un ensemble est une sélection non ordonnée de 
+\begin_inset Formula $r$
+\end_inset
+
+ éléments de l'ensemble.
+ Ainsi, une 
+\begin_inset Formula $r$
+\end_inset
+
+-combinaison consitue simplement un sous-ensemble de l'ensemble ayant 
+\begin_inset Formula $r$
+\end_inset
+
+ éléments.
+ Le nombre de 
+\begin_inset Formula $r$
+\end_inset
+
+-combinaison d'un ensemble à 
+\begin_inset Formula $n$
+\end_inset
+
+ éléments disctincts est noté 
+\begin_inset Formula $C(n,r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+Soit 
+\begin_inset Formula $S$
+\end_inset
+
+ l'ensemble 
+\begin_inset Formula $\{1,2,3,4\}$
+\end_inset
+
+.
+ Alors, 
+\begin_inset Formula $\{1,3,4\}$
+\end_inset
+
+ est une 
+\begin_inset Formula $3$
+\end_inset
+
+-combinaison de 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+Le nombre de 
+\begin_inset Formula $r$
+\end_inset
+
+-combinaisons d'un ensemble ayant 
+\begin_inset Formula $n$
+\end_inset
+
+ éléments, où 
+\begin_inset Formula $n$
+\end_inset
+
+ est un entier positif et 
+\begin_inset Formula $r,$
+\end_inset
+
+ un entier avec 
+\begin_inset Formula $0\leq r\leq n$
+\end_inset
+
+, est égal à 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+C(n,r)=\cfrac{n!}{r!(n-r)!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary*
+Soit 
+\begin_inset Formula $n$
+\end_inset
+
+ et 
+\begin_inset Formula $r$
+\end_inset
+
+ des entiers non négatifs avec 
+\begin_inset Formula $r\leq n$
+\end_inset
+
+.
+ Alors, 
+\begin_inset Formula 
+\[
+C(n,r)=C(n,n-r)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il existe une autre notation courante pour calculer le nombre de 
+\begin_inset Formula $r$
+\end_inset
+
+-combinaisons d'un ensemble à 
+\begin_inset Formula $n$
+\end_inset
+
+ éléments, notament le coefficient binomial : 
+\begin_inset Formula $\left(\begin{array}{c}
+n\\
+r
+\end{array}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Combinaisons avec remise
+\end_layout
+
+\begin_layout Theorem*
+Il y a 
+\begin_inset Formula $C(n+r-1,r)$
+\end_inset
+
+ 
+\begin_inset Formula $r$
+\end_inset
+
+-combinaisons avec remise pour un ensemble à 
+\begin_inset Formula $n$
+\end_inset
+
+ éléments.
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+C(n+r-1,r)=\cfrac{(n+r-1)!}{r!(n-1)!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Coefficients binomiaux et identité
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+Identité de Pascal
+\end_layout
+
+\begin_layout Theorem*
+Soit 
+\begin_inset Formula $n$
+\end_inset
+
+ et 
+\begin_inset Formula $k$
+\end_inset
+
+ des entiers positifs avec 
+\begin_inset Formula $n\geq k$
+\end_inset
+
+.
+ Alors, 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+C(n+1,k)=C(n,k-1)+C(n,k)
+\]
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/remy/Images/PascalsTriangleCoefficient.jpg
+	width 5cm
+	height 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Soit 
+\begin_inset Formula $n$
+\end_inset
+
+ un entier positif.
+ Alors 
+\begin_inset Formula 
+\[
+\sum_{k=0}^{n}C(n,k)=2^{n}
+\]
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem*
+
+\series bold
+Théorème du binôme 
+\end_layout
+
+\begin_layout Theorem*
+Soit 
+\begin_inset Formula $x$
+\end_inset
+
+ et 
+\begin_inset Formula $y$
+\end_inset
+
+ des variables et 
+\begin_inset Formula $n$
+\end_inset
+
+ un entier positif.
+ Alors, 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(x+y)^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\sum_{j=0}^{n}C(n,j)x^{n-j}y^{j}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $=C(n,0)x^{n}+C(n,1)x^{n-1}y+C(n,2)x^{n-2}y^{2}+...+C(n,n-1)xy^{n-1}+C(n,n)y^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example*
+Quel est le développement de 
+\begin_inset Formula $(x+y)^{4}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Example*
+Solution : A partir du théorème du binôme, il s'ensuit que
+\end_layout
+
+\begin_layout Example*
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(x+y)^{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=\sum_{j=0}^{4}C(4,j)x^{4-j}y^{j}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=C(4,0)x^{4}+C(4,1)x^{3}y+C(4,2)x^{2}y^{2}+C(4,3)xy^{3}+C(4,4)y^{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=x^{4}+4x^{3}y+6x^{2}y^{2}+4xy^{3}+y^{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+Soit 
+\begin_inset Formula $n$
+\end_inset
+
+ un entier positif.
+ Alors 
+\begin_inset Formula 
+\[
+\sum_{k=0}^{n}(-1)^{k}C(n,k)=0
+\]
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ce théorème peut être obtenu à partir du théorème du binôme de 
+\begin_inset Formula $((-1)+1)^{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Techniques de dénombrement avancées 
+\end_layout
+
+\begin_layout Subsection
+Relation de récurrence
+\end_layout
+
+\begin_layout Definition
+Une 
+\series bold
+relation de récurrence
+\series default
+ pour la suite 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ est une formule qui exprime 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ en fonction d'un ou de plusieurs termes qui le précèdent dans la suite,
+ soit 
+\begin_inset Formula $a_{0},a_{1},...,a_{n-1}$
+\end_inset
+
+, pour tout entier 
+\begin_inset Formula $n$
+\end_inset
+
+ tel que 
+\begin_inset Formula $n\geq n_{0}$
+\end_inset
+
+, où 
+\begin_inset Formula $n_{0}$
+\end_inset
+
+ est un nombre entier non négatif.
+ Une suite est une 
+\series bold
+solution
+\series default
+ d'une relation de récurrence si ses termes satisfont la relation de récurrence.
+\end_layout
+
+\begin_layout Standard
+Les 
+\series bold
+conditions initiales
+\series default
+ d'une suite spécifient les éléments qui précèdent le premier élément à
+ partir duquel la relation de récurrence s'applique.
+\end_layout
+
+\begin_layout Subsection
+Solution des relations de récurrence
+\end_layout
+
+\begin_layout Subsubsection*
+
+\series bold
+Relation de récurrence linéaire homogène de degré 
+\begin_inset Formula $k$
+\end_inset
+
+ à coefficients constants
+\end_layout
+
+\begin_layout Definition
+Une 
+\series bold
+relation de récurrence linéaire homogène de degré 
+\begin_inset Formula $k$
+\end_inset
+
+ à coefficients constants
+\series default
+ est une relation de réccurence de la forme
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+où 
+\begin_inset Formula $c_{1},c_{2},...,c_{k}$
+\end_inset
+
+ sont des nombres réels avec 
+\begin_inset Formula $c_{k}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+1.
+ Soit 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+et 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ des nombres réels.
+ On suppose que l'équation 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+r^{2}-c_{1}r-c_{2}=0
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem*
+a une racine double 
+\begin_inset Formula $r_{0}$
+\end_inset
+
+.
+ Alors, la suite 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ est une solution de la relation de récurrence 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem*
+si et seulement si 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+a_{n}=\alpha_{1}r_{0}^{n}+\alpha_{2}r_{0}^{n}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem*
+pour 
+\begin_inset Formula $n=0,1,2,...$
+\end_inset
+
+, où 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ sont des contantes.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem*
+2.
+ Soit 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+et 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ des nombres réels avec 
+\begin_inset Formula $c_{2}\neq0$
+\end_inset
+
+.
+ On suppose que l'équation 
+\begin_inset Formula 
+\[
+r^{2}-c_{1}r-c_{2}=0
+\]
+
+\end_inset
+
+ possède deux racines distinctes 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+.
+ Alors, la suite 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ est une solution de la relation de récurrence 
+\begin_inset Formula 
+\[
+a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}
+\]
+
+\end_inset
+
+ si et seulement si 
+\begin_inset Formula 
+\[
+a_{n}=\alpha_{1}r_{1}^{n}+\alpha_{2}r_{2}^{n}
+\]
+
+\end_inset
+
+ pour 
+\begin_inset Formula $n=0,1,2,...$
+\end_inset
+
+, où 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ sont des contantes.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem*
+3.
+ Soit 
+\begin_inset Formula $c_{1},c_{2},...,c_{k}$
+\end_inset
+
+ des nombres réels.
+ On suppose que l'équation caractéristique 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+r^{k}-c_{1}r^{k-1}-...-c_{k}=0
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem*
+admet 
+\begin_inset Formula $k$
+\end_inset
+
+ racines distinctes 
+\begin_inset Formula $r_{1},r_{2},...,r_{k}$
+\end_inset
+
+.
+ Alors, une suite 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ est une solution de la relation de récurrence 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+si et seulement si
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+a_{n}=\alpha_{1}r_{1}^{n}+\alpha_{2}r_{2}^{n}+...+\alpha_{k}r_{k}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+pour 
+\begin_inset Formula $n=0,1,2,...,$
+\end_inset
+
+ où 
+\begin_inset Formula $\alpha_{1},\alpha_{2},...,\alpha_{k}$
+\end_inset
+
+ sont des constantes.
+\end_layout
+
+\begin_deeper
+\begin_layout Theorem*
+4.
+ Soit 
+\begin_inset Formula $c_{1},c_{2},...,c_{k}$
+\end_inset
+
+ des nombres réels.
+ On suppose que l'équation caractéristique 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+r^{k}-c_{1}r^{k-1}-...-c_{k}=0
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem*
+admet 
+\begin_inset Formula $t$
+\end_inset
+
+ racines distinctes 
+\begin_inset Formula $r_{1},r_{2},...,r_{t}$
+\end_inset
+
+ avec des multiplicités 
+\begin_inset Formula $m_{1},m_{2},...,m_{t}$
+\end_inset
+
+ respective tel que 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula $m_{i}\geq1$
+\end_inset
+
+ pour 
+\begin_inset Formula $i=0,1,2,...,t$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem*
+et 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+m_{1}+m_{2}+...+m_{t}=k
+\]
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem*
+Alors, une suite 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ est une solution de la relation de récurrence 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+si et seulement si
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{n}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\alpha_{1,0}+\alpha_{1,1}n+...+\alpha_{1,m_{1}-1}n^{m_{1}-1})r_{1}^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+(\alpha_{2,0}+\alpha_{2,1}n+...+\alpha_{2,m_{2}-1}n^{m_{2}-1})r_{2}^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+...$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+(\alpha_{t,0}+\alpha_{t,1}n+...+\alpha_{t,m_{t}-1}n^{m_{t}-1})r_{t}^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+pour 
+\begin_inset Formula $n=0,1,2,...,$
+\end_inset
+
+ où 
+\begin_inset Formula $\alpha_{i,j}$
+\end_inset
+
+ sont des constantes pour 
+\begin_inset Formula $1\leq i\leq t$
+\end_inset
+
+ et 
+\begin_inset Formula $0\leq j\leq m_{i}-1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection*
+
+\series bold
+Relation de récurrence linéaire non-homogène de degré 
+\begin_inset Formula $k$
+\end_inset
+
+ à coefficients constants
+\end_layout
+
+\begin_layout Definition
+Une 
+\series bold
+relation de récurrence linéaire non-homogène de degré 
+\begin_inset Formula $k$
+\end_inset
+
+ à coefficients constants
+\series default
+ est une relation de réccurence de la forme
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}+F(n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+où 
+\begin_inset Formula $c_{1},c_{2},...,c_{k}$
+\end_inset
+
+ sont des nombres réels, et 
+\begin_inset Formula $F(n)$
+\end_inset
+
+ est une fonction qui ne dépend pas de 0 mais seulement de 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+La relation de récurrence 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+est appelée la relation de récurrence homogène associée.
+ 
+\end_layout
+
+\begin_layout Theorem*
+5.
+ Si 
+\begin_inset Formula $\{a_{n}^{p}\}$
+\end_inset
+
+ est une solution particulière de la relation de récurrence non-homogène
+ avec coefficient constant
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}+F(n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+alors chaque solution de la forme 
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+\{a_{p}^{n}+a_{h}^{n}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+où 
+\begin_inset Formula $\{a_{h}^{n}\}$
+\end_inset
+
+ est une solution de la relation de récurrence homogène associée
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Etat de l'espace
+\end_layout
+
+\begin_layout Standard
+Nous avons l'équation de récurrence suivante : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}=c_{1}a_{n-1}+c_{2}a_{n-2}+...+c_{k}a_{n-k}+F(n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Transformons la en vecteurs et matrices :
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $a_{n}=\left[\begin{array}{c}
+a_{n}\\
+a_{n-1}\\
+...\\
+a_{n-k+1}
+\end{array}\right]$
+\end_inset
+
+ 
+\begin_inset Formula $a_{n-1}=\left[\begin{array}{c}
+a_{n-1}\\
+a_{n-2}\\
+...\\
+a_{n-k}
+\end{array}\right]$
+\end_inset
+
+ 
+\begin_inset Formula $f_{n}=\left[\begin{array}{c}
+F(n)\\
+0\\
+...\\
+0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On définit aussi la matrice 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C=\left[\begin{array}{cccccc}
+c_{1} & c_{2} & c_{3} & \ldots & c_{k-1} & c_{k}\\
+1 & 0 & 0 & \ldots & 0 & 0\\
+0 & 1 & 0 & \ldots & 0 & 0\\
+0 & 0 & 1 & \ldots & 0 & 0\\
+\cdots & \cdots & \cdots & \ddots & \cdots & \cdots\\
+0 & 0 & 0 & \ldots & 1 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On obtient donc l'équation du premier ordre 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}=Ca_{n-1}+f_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Avec la condition initiale 
+\begin_inset Formula $n=0$
+\end_inset
+
+, 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ est donné.
+\end_layout
+
+\begin_layout Standard
+On tente de résoudre cette équation vectoriel :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+\begin{array}{c}
+a_{1}=\\
+a_{2}=\\
+a_{3}=\\
+...
+\end{array} & \begin{array}{c}
+Ca_{0}+f_{1}\\
+Ca_{1}+f_{2}=C^{2}a_{0}+Cf_{1}+f_{2}\\
+Ca_{2}+f_{3}=C^{3}a_{0}+C^{2}f_{1}+Cf_{2}+f_{3}\\
+\\
+\end{array}\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Qui peut aussi s'écrire 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}=C^{n}a_{0}+\sum_{k=1}^{n}C^{k-1}f_{n-k+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+qui nous donne une solution.
+\end_layout
+
+\begin_layout Subsection
+Principe d'inclusion-exclusion
+\end_layout
+
+\begin_layout Subsubsection*
+Cas de 3 ensembles finis
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/remy/Images/220px-Inclusion-exclusion.svg.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Graphes 
+\end_layout
+
+\begin_layout Subsection
+Introduction au graphes
+\end_layout
+
+\begin_layout Definition
+Un 
+\series bold
+graphe simple
+\series default
+ 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ est constitué de 
+\begin_inset Formula $V,$
+\end_inset
+
+ un ensemble non vide de
+\series bold
+ sommets
+\series default
+, et de 
+\begin_inset Formula $E$
+\end_inset
+
+, un ensemble de couples d'éléments disctincts de V appelés les 
+\series bold
+arcs
+\series default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Un 
+\series bold
+multigraphe
+\series default
+ 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ est formé d'un ensemble 
+\begin_inset Formula $V$
+\end_inset
+
+ de sommets, d'un ensemble 
+\begin_inset Formula $E$
+\end_inset
+
+ d'arcs et d'une fonction 
+\begin_inset Formula $f$
+\end_inset
+
+ de 
+\begin_inset Formula $E$
+\end_inset
+
+ dans 
+\begin_inset Formula $\{\{u,v\}|u,v\in V,u\neq v\}$
+\end_inset
+
+.
+ Les arcs 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+ sont appelés des 
+\series bold
+arcs multiples 
+\series default
+(ou 
+\series bold
+arcs parallèles
+\series default
+) si 
+\begin_inset Formula $f(e_{1})=f(e_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Un 
+\series bold
+pseudographe
+\series default
+ 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ est formé d'un ensemble 
+\begin_inset Formula $V$
+\end_inset
+
+ de sommets, d'un ensemble 
+\begin_inset Formula $E$
+\end_inset
+
+ d'arcs et d'une fonction 
+\begin_inset Formula $f$
+\end_inset
+
+ de 
+\begin_inset Formula $E$
+\end_inset
+
+ dans 
+\begin_inset Formula $\{\{u,v\}|u,v\in V\}$
+\end_inset
+
+.
+ Un arc est une 
+\series bold
+boucle
+\series default
+ si 
+\begin_inset Formula $f(e)=\{u\}$
+\end_inset
+
+pour certains 
+\begin_inset Formula $u\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Un 
+\series bold
+graphe orienté
+\series default
+ 
+\begin_inset Formula $(V,E)$
+\end_inset
+
+ est formé d'un ensemble de sommets 
+\begin_inset Formula $V$
+\end_inset
+
+ et d'un ensemble d'arcs 
+\begin_inset Formula $E$
+\end_inset
+
+ qui sont des couples des éléments de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Un 
+\series bold
+multigraphe orienté
+\series default
+ 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ est formé d'un ensemble 
+\begin_inset Formula $V$
+\end_inset
+
+ de sommets, d'un ensemble 
+\begin_inset Formula $E$
+\end_inset
+
+ d'arcs et d'une fonction 
+\begin_inset Formula $f$
+\end_inset
+
+ à partir de 
+\begin_inset Formula $E$
+\end_inset
+
+ dans 
+\begin_inset Formula $\{(u,v)|u,v\in V\}$
+\end_inset
+
+.
+ Les arcs 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+ sont des arcs multiples si 
+\begin_inset Formula $f(e_{1})=f(e_{2})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="4cm">
+<column alignment="center" valignment="top" width="4cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Arcs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Les arcs multiples sont-ils autorisés ?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Les boucles sont-elles autorisées ?
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Graphe simple
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Non orientés
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Non
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Non
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Multigraphe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Non orientés
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Oui
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Non
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Pseudographe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Non orientés
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Oui
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Oui
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Graphe orienté
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Orientés
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Non
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Oui
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Multigraphe orienté
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Orientés
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Oui
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Oui
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Terminologie des graphes
+\end_layout
+
+\begin_layout Subsubsection
+Terminologie de base
+\end_layout
+
+\begin_layout Definition
+Deux sommets 
+\begin_inset Formula $u$
+\end_inset
+
+ et 
+\begin_inset Formula $v$
+\end_inset
+
+ dans un graphe non orienté 
+\begin_inset Formula $G$
+\end_inset
+
+ sont 
+\series bold
+adjacents
+\series default
+ (ou voisins) dans 
+\begin_inset Formula $G$
+\end_inset
+
+ si 
+\begin_inset Formula $\{u,v\}$
+\end_inset
+
+ est un arc de 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $e=\{u,v\}$
+\end_inset
+
+, l'arc 
+\begin_inset Formula $e$
+\end_inset
+
+ est
+\series bold
+ incident
+\series default
+ aux sommets 
+\begin_inset Formula $u$
+\end_inset
+
+ et 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ On dit également que l'arc 
+\begin_inset Formula $e$
+\end_inset
+
+ 
+\series bold
+relie
+\series default
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ et 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Les sommets 
+\begin_inset Formula $u$
+\end_inset
+
+ et 
+\begin_inset Formula $v$
+\end_inset
+
+ sont les points terminaux de l'arc 
+\begin_inset Formula $\{u,v\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Le 
+\series bold
+degré d'un sommet
+\series default
+ dans un graphe non orienté est le nombre d'arcs incidents à ce sommet,
+ et une boucle sur un sommet contribue deux fois au degré du sommet.
+ Le degré du sommet 
+\begin_inset Formula $v$
+\end_inset
+
+ est noté 
+\begin_inset Formula $deg(v)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Remark*
+Un sommet de degré 0 est un sommet 
+\series bold
+isolé
+\series default
+.
+ Un sommet de degré 1 est dit 
+\series bold
+pendant
+\series default
+.
+\end_layout
+
+\begin_layout Theorem*
+
+\series bold
+\shape up
+Lemme des poignées de mains
+\end_layout
+
+\begin_layout Theorem*
+Soit 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ un graphe non orienté avec 
+\begin_inset Formula $e$
+\end_inset
+
+ arcs.
+\end_layout
+
+\begin_layout Theorem*
+Alors,
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+2e=\sum_{v\in V}deg(v)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem*
+(A noter que ce théorème s'applique même dans le cas d'arcs multiples et
+ de boucles.)
+\end_layout
+
+\begin_layout Example*
+Combien y a-t-il d'arcs dans un graphe comportant 10 sommets, chacun de
+ degré 6 ?
+\end_layout
+
+\begin_layout Example*
+
+\emph on
+Solution:
+\emph default
+ Puisque la somme des degrés des sommets est 
+\begin_inset Formula $6\cdot10=60$
+\end_inset
+
+, il s'ensuit que 
+\begin_inset Formula $2e=60.$
+\end_inset
+
+ Donc 
+\begin_inset Formula $e=30$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem*
+Un graphe non orienté a un nombre pair de sommets de degrés impairs.
+\end_layout
+
+\begin_layout Definition
+Quand 
+\begin_inset Formula $(u,v)$
+\end_inset
+
+ est un arc du graphe 
+\begin_inset Formula $G$
+\end_inset
+
+ avec des arcs orientés, 
+\begin_inset Formula $u$
+\end_inset
+
+ est adjacent à 
+\begin_inset Formula $v$
+\end_inset
+
+ et 
+\begin_inset Formula $v$
+\end_inset
+
+ est adjacent à 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Le sommet 
+\begin_inset Formula $u$
+\end_inset
+
+ est l'
+\series bold
+extrémité initiale
+\series default
+ de 
+\begin_inset Formula $(u,v)$
+\end_inset
+
+ et 
+\begin_inset Formula $v$
+\end_inset
+
+ est l'
+\series bold
+extrémité terminale
+\series default
+ ou finale de 
+\begin_inset Formula $(u,v)$
+\end_inset
+
+.
+ Les extrémités initiale et finale d'une boucle sont identiques.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Dans un graphe orienté, le 
+\series bold
+degré intérieur
+\series default
+ d'un sommet 
+\begin_inset Formula $v$
+\end_inset
+
+, noté 
+\begin_inset Formula $deg^{-}(v)$
+\end_inset
+
+, est le nombre d'arcs qui ont 
+\begin_inset Formula $v$
+\end_inset
+
+, comme extrémité finale.
+ Le 
+\series bold
+degré extérieur
+\series default
+ de 
+\begin_inset Formula $v$
+\end_inset
+
+, noté 
+\begin_inset Formula $deg^{+}(v)$
+\end_inset
+
+, est le nombre d'arcs qui ont 
+\begin_inset Formula $v$
+\end_inset
+
+ comme extrémité initiale.
+\end_layout
+
+\begin_layout Remark*
+Une boucle sur un sommet contribue pour 1 à la fois au degré intérieur et
+ au degré extérieur de ce sommet.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem*
+Soit 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ un graphe orienté.
+ Alors,
+\end_layout
+
+\begin_layout Theorem*
+\begin_inset Formula 
+\[
+\sum_{v\in V}deg^{-}(v)=\sum_{v\in V}deg^{+}(v)=|E|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Graphes complets : 
+\end_layout
+
+\begin_layout Standard
+Le graphe complet de 
+\begin_inset Formula $n$
+\end_inset
+
+ sommets, noté 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+ est le graphe simple qui contient exactement un arc entre chaque pair de
+ sommets disctincts.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/remy/Images/graphes complets.jpg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Graphes cycles :
+\end_layout
+
+\begin_layout Standard
+Le cycle 
+\begin_inset Formula $C_{n},n\geq3$
+\end_inset
+
+, consiste en 
+\begin_inset Formula $n$
+\end_inset
+
+ sommets 
+\begin_inset Formula $v_{1},v_{2},...,v_{n}$
+\end_inset
+
+ et arcs 
+\begin_inset Formula $\{v_{1},v_{2}\},\{v_{2},v_{3}\},...,\{v_{n},v_{1}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/remy/Images/graphes cycle.jpg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Graphes roues :
+\end_layout
+
+\begin_layout Standard
+On obtient la roue 
+\begin_inset Formula $W_{n}$
+\end_inset
+
+ (Wheel) quand on ajoute un sommet supplémentaire au cycle 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ pour 
+\begin_inset Formula $n\geq3$
+\end_inset
+
+ et qu'on relie ce nouveau sommet à chacun des sommets 
+\begin_inset Formula $n$
+\end_inset
+
+ de 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ au moyen de nouveaux arcs.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/remy/Images/graphes roue.jpg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Graphes cubes de dimension 
+\begin_inset Formula $n$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+Le cube de dimension 
+\begin_inset Formula $n$
+\end_inset
+
+, noté 
+\begin_inset Formula $Q_{n}$
+\end_inset
+
+, est le graphe qui a des sommets représentant les chaînes binaires 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ de longueur 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Deux sommets sont adjacents si et seulement si les chaines binaires qu'il
+ représentent différent d'exactement un bit.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/remy/Images/graphes dimension.jpg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Graphes bipartis
+\end_layout
+
+\begin_layout Definition
+Un graphe simple 
+\begin_inset Formula $G$
+\end_inset
+
+ est 
+\series bold
+biparti
+\series default
+ si l'ensemble 
+\begin_inset Formula $V$
+\end_inset
+
+ de ses sommets peut être partitionné en deux ensembles non vides et disjoints
+ 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+et 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ de telle façon que chaque arc du graphe relie un sommet de 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+à un sommet de 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ (de telle manière qu'il n'y ait aucun arc de 
+\begin_inset Formula $G$
+\end_inset
+
+ qui relie soit deux sommets de 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+, soit deux sommets de 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/remy/Images/200px-Simple-bipartite-graph.svg.png
+	width 3cm
+	BoundingBox 0bp 0bp 200bp 185bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Graphes issus d'un graphe
+\end_layout
+
+\begin_layout Definition
+Un 
+\series bold
+sous-graphe
+\series default
+ du graphe 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ est un graphe 
+\begin_inset Formula $H=(W,F)$
+\end_inset
+
+, où 
+\begin_inset Formula $W\subseteq V$
+\end_inset
+
+ et 
+\begin_inset Formula $F\subseteq E$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+L'
+\series bold
+union
+\series default
+ de deux graphes simples 
+\begin_inset Formula $G_{1}=(V_{1},E_{1})$
+\end_inset
+
+ et 
+\begin_inset Formula $G_{2}=(V_{2},E_{2})$
+\end_inset
+
+ est un graphe simple qui contient l'ensemble des sommets 
+\begin_inset Formula $V_{1}\cup V_{2}$
+\end_inset
+
+et l'ensemble des arcs 
+\begin_inset Formula $E_{1}\cup E_{2}$
+\end_inset
+
+.
+ L'union de 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+et 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ est notée 
+\begin_inset Formula $G_{1}\cup G_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/remy/Images/union graphe.jpg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Représentation des graphes et isomorphisime des graphes
+\end_layout
+
+\begin_layout Standard
+Pour cette section, nous considererons le graphe suivant : 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/remy/Images/liste d'adjacence.jpg
+	scale 80
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+Une 
+\series bold
+liste d'adjacence
+\series default
+ peut être utilisée pour représenter un graphe sans arc multiple en spécifiant
+ les sommets d'adjacence pour chaque sommet du graphe.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Sommet initial
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Sommets terminaux
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\emph on
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\emph on
+b,c,d,e
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\emph on
+b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\emph on
+b,d
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\emph on
+c
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\emph on
+a,c,e
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\emph on
+d
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\emph on
+e
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\emph on
+b,c,d
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Soit 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ un graphe simple où 
+\begin_inset Formula $|V|=n$
+\end_inset
+
+.
+ La 
+\series bold
+matrice d'adjacence
+\series default
+ 
+\begin_inset Formula $A_{G}$
+\end_inset
+
+ de G est la matrice binaire 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ où, si 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ et 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ sont adjacents, alors 
+\begin_inset Formula $a_{ij}=1$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ et 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ ne sont sont pas adjacents, alors 
+\begin_inset Formula $a_{ij}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccccc}
+0 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 1\\
+0 & 0 & 0 & 0 & 0\\
+0 & 1 & 1 & 0 & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Une matrice d'adjacence peut aussi être utilisée pour représenter des multigraph
+es par exemple.
+ Elle ne sera alors plus binaire, et 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ représentera le nombre d'arêtes entre les noeuds 
+\begin_inset Formula $i$
+\end_inset
+
+ et 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Dans le cas de graphes dirigés, la matrice ne sera plus symétrique.
+\end_layout
+
+\begin_layout Definition
+Soit 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ un graphe non-dirigé avec 
+\begin_inset Formula $n$
+\end_inset
+
+ noeuds et 
+\begin_inset Formula $m$
+\end_inset
+
+ arcs.
+ La 
+\series bold
+matrice d'incidence
+\series default
+ est la matrice 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ où 
+\begin_inset Formula $m_{ij}=1$
+\end_inset
+
+ si l'arc 
+\begin_inset Formula $e_{j}$
+\end_inset
+
+ est incident avec 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, et 
+\begin_inset Formula $0$
+\end_inset
+
+ sinon.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Les graphes simples 
+\begin_inset Formula $G_{1}=(V_{1},E_{1})$
+\end_inset
+
+ et 
+\begin_inset Formula $G_{2}=(V_{2},E_{2})$
+\end_inset
+
+ sont 
+\series bold
+isomorphes
+\series default
+ s'il existe une fonction bijective 
+\begin_inset Formula $f$
+\end_inset
+
+ de 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ à 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ avec la propriété suivante: 
+\begin_inset Formula $a$
+\end_inset
+
+ et 
+\begin_inset Formula $b$
+\end_inset
+
+ sont adjacents dans 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ si et seulement si 
+\begin_inset Formula $f(a)$
+\end_inset
+
+ et
+\begin_inset Formula $f(b)$
+\end_inset
+
+ sont adjacents dans 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+, pour tout 
+\begin_inset Formula $a,b$
+\end_inset
+
+ dans 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+.
+ Une telle fonction 
+\begin_inset Formula $f$
+\end_inset
+
+ est un 
+\series bold
+isomorphisme
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Connexité
+\end_layout
+
+\begin_layout Subsubsection
+Chemins
+\end_layout
+
+\begin_layout Definition
+Un 
+\series bold
+chemin
+\series default
+ est une séquence d'arcs qui commence au noeud d'un graphe et qui voyage
+ de noeud en noeud en suivant les arcs du graphe.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Soit 
+\begin_inset Formula $n$
+\end_inset
+
+ un entier non-négatif et 
+\begin_inset Formula $G$
+\end_inset
+
+ un graphe non-dirigé.
+ Un 
+\series bold
+chemin
+\series default
+ de longueur 
+\begin_inset Formula $n$
+\end_inset
+
+ de 
+\begin_inset Formula $u$
+\end_inset
+
+ à 
+\begin_inset Formula $v$
+\end_inset
+
+ dans 
+\begin_inset Formula $G$
+\end_inset
+
+ est une séquence de 
+\begin_inset Formula $n$
+\end_inset
+
+ arcs de 
+\begin_inset Formula $G$
+\end_inset
+
+ pour lesquels il existe une séquence 
+\begin_inset Formula $x_{0}=u,x_{1},...,x_{n-1}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{n}=v$
+\end_inset
+
+ de noeuds telle que 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ a pour 
+\begin_inset Formula $i=1,...,n$
+\end_inset
+
+, les extrémités 
+\begin_inset Formula $x_{i-1}$
+\end_inset
+
+ et 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Remark*
+Quand le graphe est simple, on peut décrire ce chemin simplement en citant
+ les noeuds par lesquels il passe.
+ Le chemin est un 
+\series bold
+circui
+\series default
+t si 
+\begin_inset Formula $u=v$
+\end_inset
+
+ et qu'il a une longueur non-nulle.
+ Un chemin est 
+\series bold
+simple
+\series default
+ s'il ne passe pas plus d'une fois par chaque arc.
+\end_layout
+
+\begin_layout Subsubsection
+Connexité dans un graphe non-dirigé
+\end_layout
+
+\begin_layout Definition
+Un graphe non-dirigé est dit 
+\series bold
+connexe
+\series default
+ si il y a un chemin entre chaque paire de noeuds.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Une 
+\series bold
+composante connexe
+\series default
+ d'un graphe est un sous-graphe connexe de 
+\begin_inset Formula $G$
+\end_inset
+
+ qui n'est pas un sous-graphe propre d'un autre sous-graphe connexe de 
+\begin_inset Formula $G.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Connexité dans un graphe dirigé
+\end_layout
+
+\begin_layout Definition
+Un graphe dirigé est 
+\series bold
+fortement connexe
+\series default
+ s'il existe un chemin de 
+\begin_inset Formula $a$
+\end_inset
+
+ vers 
+\begin_inset Formula $b$
+\end_inset
+
+ et de b vers a quels que soient 
+\begin_inset Formula $a$
+\end_inset
+
+ et 
+\begin_inset Formula $b$
+\end_inset
+
+ dans le graphe.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Un graphe dirigé est 
+\series bold
+faiblement connexe
+\series default
+ s'il existe un chemin entre 
+\begin_inset Formula $a$
+\end_inset
+
+ et 
+\begin_inset Formula $b$
+\end_inset
+
+ dans le graphe non-dirigé correspondant.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Les sous-graphes d'un graphe dirigé qui sont fortement connexes mais qui
+ ne sont pas contenus dans d'autres sous-graphes connexes plus larges (le
+ sous-graphe fortement connexe maximal) sont appelés les composantes fortement
+ connexes de 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Dénombrer les chemins entre deux noeuds
+\end_layout
+
+\begin_layout Theorem
+Soit G un graphe et A sa matrice d'adjacence.
+ Le nombre de chemins différents de longueur 
+\begin_inset Formula $r$
+\end_inset
+
+ de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ à 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+, où 
+\begin_inset Formula $r>0$
+\end_inset
+
+, est égal à la 
+\begin_inset Formula $(i,j)^{e}$
+\end_inset
+
+ position de 
+\begin_inset Formula $A^{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Ce théorème peut être démontré en utilisant l'induction mathématique.
+ Soit 
+\begin_inset Formula $G$
+\end_inset
+
+ un graphe ayant la matrice d'adjacence 
+\begin_inset Formula $A$
+\end_inset
+
+ (en présumant l'ordonnancement 
+\begin_inset Formula $v_{1},v_{2},...,v_{n}$
+\end_inset
+
+ des sommets de 
+\begin_inset Formula $G$
+\end_inset
+
+).
+ Le nombre de chemins de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ à 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ de longueur 1 est le 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+-ième élément de A, puisque cet élément représente le nombre d'arcs de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ à 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+On suppose que le 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+-ième élément de 
+\begin_inset Formula $A^{r}$
+\end_inset
+
+ est le nombre de chemins distincts de longueur 
+\begin_inset Formula $r$
+\end_inset
+
+ de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ à 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+, ce qui constitue une hypothèse d'induction.
+ Puisque 
+\begin_inset Formula $A^{r+1}=A^{r}A$
+\end_inset
+
+, le 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+-ième élément de 
+\begin_inset Formula $A^{r+1}$
+\end_inset
+
+est égal à
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+b_{i1}a_{1j}+b_{i2}a_{2j}+...+b_{in}a_{nj}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Où 
+\begin_inset Formula $b_{ik}$
+\end_inset
+
+ est le 
+\begin_inset Formula $(i,k)$
+\end_inset
+
+-ième élément de 
+\begin_inset Formula $A^{r}$
+\end_inset
+
+.
+ En posant cette hypothèse d'induction, 
+\begin_inset Formula $b_{ik}$
+\end_inset
+
+ est le nombre de chemins de longueur 
+\begin_inset Formula $r$
+\end_inset
+
+ de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ à 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Un chemin de longueur 
+\begin_inset Formula $r+1$
+\end_inset
+
+ de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ à 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ est constitué d'un chemin de longueur 
+\begin_inset Formula $r$
+\end_inset
+
+ depuis 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ vers un sommet intermédiaire quelconque 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+ et un arc depuis 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+ vers 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+.
+ En appliquant le principe de la multiplication, le nombre de ces chemins
+ est le produit du nombre de chemins de longueur 
+\begin_inset Formula $r$
+\end_inset
+
+ de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ à 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+, notamment 
+\begin_inset Formula $b_{ik}$
+\end_inset
+
+, et du nombre d'arcs de 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+ à 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+, notamment 
+\begin_inset Formula $a_{kj}$
+\end_inset
+
+.
+ En additionnant ces produits pour tous les sommets intermédiaires possibles
+ 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+ et en appliquant le principe de l'addition, on obtient le résultat désiré.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Chaînes eulériennes et hamiltoniennes
+\end_layout
+
+\begin_layout Subsubsection
+Chemins et circuits eulériennes
+\end_layout
+
+\begin_layout Definition
+Un 
+\series bold
+circuit d'Euler
+\series default
+ dans un graphe 
+\begin_inset Formula $G$
+\end_inset
+
+ est un circuit simple qui contient tous les arcs de 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Un 
+\series bold
+chemin d'Euler
+\series default
+ est un chemin simple qui contient tous les arcs du graphe.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Un multigraphe connexe avec au moins deux noeuds a un circuit d'Euler si
+ et seulement si chacun de ses noeuds a un degré pair.
+ Il a un circuit d'Euler si et seulement si exactement deux noeuds du graphe
+ ont un degré impair.
+\end_layout
+
+\begin_layout Subsubsection*
+Conditions nécessaires pour les circuits et les chemins d'Euler
+\end_layout
+
+\begin_layout Itemize
+Le circuit d'Euler commence au noeud 
+\begin_inset Formula $a$
+\end_inset
+
+ et continue avec un arc reliant 
+\begin_inset Formula $a$
+\end_inset
+
+ à 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ L'arc contribue à hauteur de 1 dans 
+\begin_inset Formula $deg(a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Chaque fois que le circuit passe par un noeud, il contribue à hauteur de
+ 2 dans le degré du noeud.
+\end_layout
+
+\begin_layout Itemize
+Le circuit se termine à 
+\begin_inset Formula $a$
+\end_inset
+
+, et contribue a hauteur de 1 à 
+\begin_inset Formula $deg(a)$
+\end_inset
+
+.
+ Celui-ci est donc pair.
+\end_layout
+
+\begin_layout Itemize
+Tous les autres degrés sont pairs.
+\end_layout
+
+\begin_layout Itemize
+Si ce n'est pas un circuit mais un chemin, les noeuds initial et final ont
+ un degré impair.
+\end_layout
+
+\begin_layout Subsubsection*
+Algorithme pour construire un circuit d'EulerAlgorithme pour construire
+ un circuit d'Euler
+\end_layout
+
+\begin_layout Algorithm*
+
+\series bold
+Construction des cycles eulériens
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Algorithm*
+
+\end_layout
+
+\begin_layout Algorithm*
+
+Procédure Euler(G: multigraphe connexe avec tous les sommets de 
+\end_layout
+
+\begin_layout Algorithm*
+
+	degré pair)
+\end_layout
+
+\begin_layout Algorithm*
+
+cycle := un cycle dans G commençant à un sommet arbitrairement choisi 
+\end_layout
+
+\begin_layout Algorithm*
+
+	comprenant des arcs ajoutés succesivement de manière à former 
+\end_layout
+
+\begin_layout Algorithm*
+
+	un circuit qui retourne à ce premier sommet
+\end_layout
+
+\begin_layout Algorithm*
+
+H := G avec les arcs qui ont été elevés à ce cycle
+\end_layout
+
+\begin_layout Algorithm*
+
+tant que H a au moins une arête
+\end_layout
+
+\begin_layout Algorithm*
+
+début
+\end_layout
+
+\begin_layout Algorithm*
+
+	sous-cycle := un cycle dans H commençant à un sommet de H 
+\end_layout
+
+\begin_layout Algorithm*
+
+		qui est également un point terminal d'un arc du cycle
+\end_layout
+
+\begin_layout Algorithm*
+
+	H := H avec les arcs du sous-cycle et tous les sommets isolés 
+\end_layout
+
+\begin_layout Algorithm*
+
+		ayant été retirés
+\end_layout
+
+\begin_layout Algorithm*
+
+	cycle := cycle avec sous-cycle inséré au sommet approprié
+\end_layout
+
+\begin_layout Algorithm*
+
+fin{cycle est un cycle eulérien}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Chemins et circuits d'Hamilton
+\end_layout
+
+\begin_layout Standard
+Les chemins et circuits d'Hamilton se basent sur le même principe que ceux
+ d'Euler, à la différence près qu'on ne cherche plus à ne passer par chaque
+ arc qu'une fois mais bien à ce que chaque noeud ne soit traversé qu'une
+ et une seule fois.
+\end_layout
+
+\begin_layout Definition
+Un chemin simple dans un graphe 
+\begin_inset Formula $G$
+\end_inset
+
+ qui passe par chaque noeud exactement une fois est appelé 
+\series bold
+chemin d'Hamilton
+\series default
+.
+ Il en va de même pour les 
+\series bold
+circuits
+\series default
+.
+\end_layout
+
+\begin_layout Subsection
+Problèmes du plus court chemin (ou du chemin minimal)
+\end_layout
+
+\begin_layout Subsubsection
+Algorithme de Dijkstra
+\end_layout
+
+\begin_layout Definition
+Un graphe qui a un nombre assigné à chaque arc est appelé un 
+\series bold
+graphe pondéré
+\series default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Definition
+Le 
+\series bold
+poids
+\series default
+ d'un chemin dans un graphe est la somme des poids des arcs qui constituent
+ le chemin.
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Algorithme de Dijkstra.
+ L'algorithme de Dijkstra calcule la longueur du plus court chemin entre
+ deux noeuds d'un graphe simple pondéré non-dirigé.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename projet dijkstra/Dijkstra-Rosen-.png
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark*
+Tout sous-chemin d'un chemin minimal doit être lui-même un chemin minimal.
+\end_layout
+
+\begin_layout Subsection
+Graphes planaires
+\end_layout
+
+\begin_layout Definition
+Un graphe est dit planaire si il peut être dessiné sans qu'aucun de ses
+ arcs ne se croise.
+\end_layout
+
+\begin_layout Theorem
+Formule d'Euler.
+ Soit G un graphe planaire connexe avec 
+\begin_inset Formula $e$
+\end_inset
+
+ arcs et 
+\begin_inset Formula $v$
+\end_inset
+
+ noeuds.
+ Soit 
+\begin_inset Formula $r$
+\end_inset
+
+ le nombre de régions d'une représentation planaire de 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Alors
+\begin_inset Formula 
+\[
+r=e-v+2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Coloriage de graphes
+\end_layout
+
+\begin_layout Definition
+La 
+\series bold
+coloration
+\series default
+ d'un graphe simple est l'assignation d'une couleur à chaque noeud de façon
+ à ce qu'aucun noeud adjacent n'ait la même couleur.
+ Le nombre minimal de couleurs nécessaires à la coloration d'un graphe est
+ appelé le nombre chromatique du graphe.
+\end_layout
+
+\begin_layout Theorem
+Le nombre chromatique d'un graphe n'est jamais supérieur à 4.
+ La preuve est très complexe.
+\end_layout
+
+\begin_layout Subsection
+L'algorithme du page ranking
+\end_layout
+
+\begin_layout Standard
+Pour chaque page (noeud 
+\begin_inset Formula $i$
+\end_inset
+
+), on associe un score 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Le score 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ de chaque page 
+\begin_inset Formula $i$
+\end_inset
+
+ est proporionnel au score des pages adjacentes qui pointe vers la page
+ 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Pour 
+\begin_inset Formula $w_{ij}$
+\end_inset
+
+, le poids associé à l'arc entre la page 
+\begin_inset Formula $i$
+\end_inset
+
+ et la page 
+\begin_inset Formula $j$
+\end_inset
+
+ (généralement, 0 ou 1, 0 si non lié, 1 sinon).
+\end_layout
+
+\begin_layout Standard
+Alors, 
+\begin_inset Formula $W$
+\end_inset
+
+ qui est la matrice formée par les éléments 
+\begin_inset Formula $w_{ij}$
+\end_inset
+
+ est une matrice non symétrique fortement connectée.
+\end_layout
+
+\begin_layout Standard
+En d'autres mots pour calculé le score de la page 
+\begin_inset Formula $i$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{i}\propto\sum_{j=1}^{n}\cfrac{w_{ij}x_{j}}{w_{j.}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w_{j.}=\sum_{i=1}^{n}w_{ji}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Où 
+\begin_inset Formula $w_{j.}$
+\end_inset
+
+ est le degré sortant de la page 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark*
+Une page avec un haut score est donc une page qui est pointée de nombreuse
+ fois par des pages qui ont elles même de haut scores.
+\end_layout
+
+\begin_layout Remark*
+Ces équations peuvent être mise à jour de manière itérative jusqu'à obtenir
+ une convergence des scores calculés 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ Le vecteur 
+\begin_inset Formula $x$
+\end_inset
+
+ est normalisé a chaque itération et les pages sont ensuite classées en
+ fonction de leur score.
+\end_layout
+
+\begin_layout Subsubsection*
+Surf aléatoire
+\end_layout
+
+\begin_layout Standard
+Si l'on définit la probabilité de suivre un lien de la page 
+\begin_inset Formula $j$
+\end_inset
+
+ à la page 
+\begin_inset Formula $i$
+\end_inset
+
+ tel que 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(page(k+1)=i|page(k)=j)=\cfrac{w_{ji}}{w_{j.}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+avec
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w_{j.}=\sum_{i=1}^{n}w_{ji}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On peut écrire l'équation de mise à jour tel que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{i}(k+1)=P(page(k+1)=i)=\sum_{j=1}^{n}P(page(k+1)=i|page(k)=j)x_{j}(k)
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Et donc définir un sufeur aléatoire suivant les liens en fonction de la
+ transition de probabilité 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(page(k+1)=i|page(k)=j)=\cfrac{w_{ji}}{w_{j.}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Suite du page ranking : TO DO.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
