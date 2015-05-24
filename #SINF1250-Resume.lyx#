@@ -5374,9 +5374,9 @@ Permutations d'ensembles d'objets indiscernables
 \end_layout
 
 \begin_layout Standard
-Certains élements peuvent ne pas être discernables dans les problèmes de
+Certains éléments peuvent ne pas être discernables dans les problèmes de
  dénombrement.
- Il faut donc tenter d'éviter de compter les objets à plusieurs reprise.
+ Il faut donc tenter d'éviter de compter les objets à plusieurs reprises.
 \end_layout
 
 \begin_layout Theorem*
@@ -5952,7 +5952,7 @@ relation de récurrence linéaire homogène de degré
 
  à coefficients constants
 \series default
- est une relation de réccurence de la forme
+ est une relation de récurrence de la forme
 \end_layout
 
 \begin_layout Definition
@@ -6055,7 +6055,7 @@ pour
 \begin_inset Formula $\alpha_{2}$
 \end_inset
 
- sont des contantes.
+ sont des constantes.
 \end_layout
 
 \begin_deeper
@@ -6123,7 +6123,7 @@ a_{n}=\alpha_{1}r_{1}^{n}+\alpha_{2}r_{2}^{n}
 \begin_inset Formula $\alpha_{2}$
 \end_inset
 
- sont des contantes.
+ sont des constantes.
 \end_layout
 
 \begin_deeper
@@ -6441,7 +6441,7 @@ relation de récurrence linéaire non-homogène de degré
 
  à coefficients constants
 \series default
- est une relation de réccurence de la forme
+ est une relation de récurrence de la forme
 \end_layout
 
 \begin_layout Definition
@@ -6650,7 +6650,7 @@ Avec la condition initiale
 \end_layout
 
 \begin_layout Standard
-On tente de résoudre cette équation vectoriel :
+On tente de résoudre cette équation vectorielle :
 \end_layout
 
 \begin_layout Standard
@@ -6860,7 +6860,7 @@ boucle
 \begin_inset Formula $f(e)=\{u\}$
 \end_inset
 
-pour certains 
+ pour certains 
 \begin_inset Formula $u\in V$
 \end_inset
 
@@ -7833,7 +7833,7 @@ Représentation des graphes et isomorphisime des graphes
 \end_layout
 
 \begin_layout Standard
-Pour cette section, nous considererons le graphe suivant : 
+Pour cette section, nous considèrerons le graphe suivant : 
 \end_layout
 
 \begin_layout Standard
@@ -8199,7 +8199,7 @@ isomorphes
 \begin_inset Formula $f(a)$
 \end_inset
 
- et
+ et 
 \begin_inset Formula $f(b)$
 \end_inset
 
