@@ -4840,7 +4840,7 @@ Si on peut accomplir une tâche de
 \begin_inset Formula $n_{1}$
 \end_inset
 
-façons et une deuxième tâche de 
+ façons et une deuxième tâche de 
 \begin_inset Formula $n_{2}$
 \end_inset
 
@@ -4919,7 +4919,7 @@ et
 \begin_inset Formula $T_{1}$
 \end_inset
 
- ou
+ ou 
 \begin_inset Formula $T_{2}$
 \end_inset
 
@@ -7717,7 +7717,7 @@ et
 \begin_inset Formula $V_{1}$
 \end_inset
 
-à un sommet de 
+ à un sommet de 
 \begin_inset Formula $V_{2}$
 \end_inset
 
@@ -7796,7 +7796,7 @@ union
 \begin_inset Formula $V_{1}\cup V_{2}$
 \end_inset
 
-et l'ensemble des arcs 
+ et l'ensemble des arcs 
 \begin_inset Formula $E_{1}\cup E_{2}$
 \end_inset
 
