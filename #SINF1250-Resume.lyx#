@@ -2040,7 +2040,7 @@ fonction propositionnelle
 \begin_inset Formula $x$
 \end_inset
 
- , 
+, 
 \begin_inset Formula $P(x)$
 \end_inset
 
@@ -4840,7 +4840,7 @@ Si on peut accomplir une tâche de
 \begin_inset Formula $n_{1}$
 \end_inset
 
-façons et une deuxième tâche de 
+ façons et une deuxième tâche de 
 \begin_inset Formula $n_{2}$
 \end_inset
 
@@ -4893,7 +4893,7 @@ et
 \begin_inset Formula $T_{1}$
 \end_inset
 
-la tâche de choisir un élément de 
+ la tâche de choisir un élément de 
 \begin_inset Formula $A_{1}$
 \end_inset
 
@@ -4919,11 +4919,11 @@ et
 \begin_inset Formula $T_{1}$
 \end_inset
 
- ou
+ ou 
 \begin_inset Formula $T_{2}$
 \end_inset
 
- quivaut à la somme du nombre de façons d'éffectuer 
+ équivaut à la somme du nombre de façons d'éffectuer 
 \begin_inset Formula $T_{1}$
 \end_inset
 
@@ -4931,7 +4931,7 @@ et
 \begin_inset Formula $T_{2}$
 \end_inset
 
- , moins le nombre de façons d'exécuter 
+, moins le nombre de façons d'exécuter 
 \begin_inset Formula $T_{1}$
 \end_inset
 
@@ -4960,7 +4960,7 @@ et
 \begin_inset Formula $T_{1}$
 \end_inset
 
- et
+ et 
 \begin_inset Formula $T_{2}$
 \end_inset
 
@@ -7717,7 +7717,7 @@ et
 \begin_inset Formula $V_{1}$
 \end_inset
 
-à un sommet de 
+ à un sommet de 
 \begin_inset Formula $V_{2}$
 \end_inset
 
@@ -7796,7 +7796,7 @@ union
 \begin_inset Formula $V_{1}\cup V_{2}$
 \end_inset
 
-et l'ensemble des arcs 
+ et l'ensemble des arcs 
 \begin_inset Formula $E_{1}\cup E_{2}$
 \end_inset
 
@@ -8686,7 +8686,7 @@ chemin d'Euler
 \begin_layout Theorem
 Un multigraphe connexe avec au moins deux noeuds a un circuit d'Euler si
  et seulement si chacun de ses noeuds a un degré pair.
- Il a un circuit d'Euler si et seulement si exactement deux noeuds du graphe
+ Il a un chemin d'Euler si et seulement si exactement deux noeuds du graphe
  ont un degré impair.
 \end_layout
 
@@ -8743,8 +8743,7 @@ Si ce n'est pas un circuit mais un chemin, les noeuds initial et final ont
 \end_layout
 
 \begin_layout Subsubsection*
-Algorithme pour construire un circuit d'EulerAlgorithme pour construire
- un circuit d'Euler
+Algorithme pour construire un circuit d'Euler
 \end_layout
 
 \begin_layout Algorithm*
@@ -9032,7 +9031,7 @@ Alors,
 \end_layout
 
 \begin_layout Standard
-En d'autres mots pour calculé le score de la page 
+En d'autres mots pour calculer le score de la page 
 \begin_inset Formula $i$
 \end_inset
 
@@ -9074,12 +9073,12 @@ Où
 \end_layout
 
 \begin_layout Remark*
-Une page avec un haut score est donc une page qui est pointée de nombreuse
+Une page avec un haut score est donc une page qui est pointée de nombreuses
  fois par des pages qui ont elles même de haut scores.
 \end_layout
 
 \begin_layout Remark*
-Ces équations peuvent être mise à jour de manière itérative jusqu'à obtenir
+Ces équations peuvent être mises à jour de manière itérative jusqu'à obtenir
  une convergence des scores calculés 
 \begin_inset Formula $x_{i}$
 \end_inset

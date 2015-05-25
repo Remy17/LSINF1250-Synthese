@@ -4893,7 +4893,7 @@ et
 \begin_inset Formula $T_{1}$
 \end_inset
 
-la tâche de choisir un élément de 
+ la tâche de choisir un élément de 
 \begin_inset Formula $A_{1}$
 \end_inset
 
@@ -4923,7 +4923,7 @@ et
 \begin_inset Formula $T_{2}$
 \end_inset
 
- quivaut à la somme du nombre de façons d'éffectuer 
+ équivaut à la somme du nombre de façons d'éffectuer 
 \begin_inset Formula $T_{1}$
 \end_inset
 
@@ -4931,7 +4931,7 @@ et
 \begin_inset Formula $T_{2}$
 \end_inset
 
- , moins le nombre de façons d'exécuter 
+, moins le nombre de façons d'exécuter 
 \begin_inset Formula $T_{1}$
 \end_inset
 
@@ -4960,7 +4960,7 @@ et
 \begin_inset Formula $T_{1}$
 \end_inset
 
- et
+ et 
 \begin_inset Formula $T_{2}$
 \end_inset
 
