@@ -8994,7 +8994,7 @@ Pour chaque page (noeud
 \begin_inset Formula $i$
 \end_inset
 
- est proporionnel au score des pages adjacentes qui pointe vers la page
+ est proportionnel au score des pages adjacentes qui pointent vers la page
  
 \begin_inset Formula $i$
 \end_inset

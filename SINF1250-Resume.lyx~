@@ -2040,7 +2040,7 @@ fonction propositionnelle
 \begin_inset Formula $x$
 \end_inset
 
- , 
+, 
 \begin_inset Formula $P(x)$
 \end_inset
 
@@ -8686,7 +8686,7 @@ chemin d'Euler
 \begin_layout Theorem
 Un multigraphe connexe avec au moins deux noeuds a un circuit d'Euler si
  et seulement si chacun de ses noeuds a un degré pair.
- Il a un circuit d'Euler si et seulement si exactement deux noeuds du graphe
+ Il a un chemin d'Euler si et seulement si exactement deux noeuds du graphe
  ont un degré impair.
 \end_layout
 
@@ -8743,8 +8743,7 @@ Si ce n'est pas un circuit mais un chemin, les noeuds initial et final ont
 \end_layout
 
 \begin_layout Subsubsection*
-Algorithme pour construire un circuit d'EulerAlgorithme pour construire
- un circuit d'Euler
+Algorithme pour construire un circuit d'Euler
 \end_layout
 
 \begin_layout Algorithm*
