@@ -5984,7 +5984,7 @@ où
 \begin_inset Formula $c_{1}$
 \end_inset
 
-et 
+ et 
 \begin_inset Formula $c_{2}$
 \end_inset
 
@@ -8994,7 +8994,7 @@ Pour chaque page (noeud
 \begin_inset Formula $i$
 \end_inset
 
- est proporionnel au score des pages adjacentes qui pointe vers la page
+ est proportionnel au score des pages adjacentes qui pointent vers la page
  
 \begin_inset Formula $i$
 \end_inset
@@ -9150,7 +9150,7 @@ x_{i}(k+1)=P(page(k+1)=i)=\sum_{j=1}^{n}P(page(k+1)=i|page(k)=j)x_{j}(k)
 \end_layout
 
 \begin_layout Standard
-Et donc définir un sufeur aléatoire suivant les liens en fonction de la
+Et donc définir un surfeur aléatoire suivant les liens en fonction de la
  transition de probabilité 
 \end_layout
 

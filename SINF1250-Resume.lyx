@@ -5984,7 +5984,7 @@ où
 \begin_inset Formula $c_{1}$
 \end_inset
 
-et 
+ et 
 \begin_inset Formula $c_{2}$
 \end_inset
 
@@ -6065,7 +6065,7 @@ pour
 \begin_inset Formula $c_{1}$
 \end_inset
 
-et 
+ et 
 \begin_inset Formula $c_{2}$
 \end_inset
 
@@ -6238,7 +6238,7 @@ admet
 \begin_inset Formula $m_{1},m_{2},...,m_{t}$
 \end_inset
 
- respective tel que 
+ respectives telles que 
 \end_layout
 
 \begin_layout Theorem*
@@ -9150,7 +9150,7 @@ x_{i}(k+1)=P(page(k+1)=i)=\sum_{j=1}^{n}P(page(k+1)=i|page(k)=j)x_{j}(k)
 \end_layout
 
 \begin_layout Standard
-Et donc définir un sufeur aléatoire suivant les liens en fonction de la
+Et donc définir un surfeur aléatoire suivant les liens en fonction de la
  transition de probabilité 
 \end_layout
 
