@@ -8968,7 +8968,7 @@ coloration
 \end_layout
 
 \begin_layout Theorem
-Le nombre chromatique d'un graphe n'est jamais supérieur à 4.
+Le nombre chromatique d'un graphe planaire n'est jamais supérieur à 4.
  La preuve est très complexe.
 \end_layout
 
